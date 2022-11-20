@@ -1,6 +1,6 @@
 import GlobalStyle from "../styles/GlobalStyle";
 import Header from "./Header";
-import styled from "styled-components";
+import Footer from "./Footer";
 
 export default function Layout({ children }: { children: any }) {
   return (
@@ -8,6 +8,7 @@ export default function Layout({ children }: { children: any }) {
       {/* <GlobalStyle /> */}
       <Header />
       {children}
+      <Footer />
     </>
   );
 }
