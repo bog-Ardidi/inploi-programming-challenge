@@ -6,12 +6,13 @@ export default function Header() {
   return (
     <StyledHeader>
       <Nav>
-        <Logo src="logo.png" alt="" />
+        <Link href="/">
+          <Logo src="logo.png" alt="" />
+        </Link>
         <div>
           <Link href={`/jobs`}>
             <Button primary={false}>Login</Button>
           </Link>
-          <Button primary={true}>register</Button>
         </div>
       </Nav>
     </StyledHeader>
