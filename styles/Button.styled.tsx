@@ -6,20 +6,26 @@ interface Props {
 }
 
 export const Button = styled.button<Props>`
-  background: ${(props: any) =>
-    props.primary ? theme.colors.purple : theme.colors.white};
-  color: ${(props: any) =>
-    props.primary ? theme.colors.white : theme.colors.purple};
+  background: ${({ primary = false }) =>
+    primary ? theme.colors.purple : theme.colors.white};
+  color: ${({ primary = false }) =>
+    primary ? theme.colors.white : theme.colors.purple};
+
+  width: 10rem;
+  justify-content: "center",
+  align-items: "center";
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 15px 60px;
+  padding: 1rem;
 
   border-radius: 10px;
-  border: 3px solid;
-  border-color: ${({ theme }) => theme.colors.purple};
+  border: ${({ primary = false }) => (primary ? "1px solid" : "3px solid")};
+
+  border-color: ${({ primary = false }) =>
+    primary ? theme.colors.brown : theme.colors.purple};
 
   &:hover {
     opacity: 0.9;

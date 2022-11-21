@@ -26,14 +26,18 @@ export const StyledSocialIcons = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.gray};
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
     margin-left: 10px;
-    height: 40px;
+    height: 30px;
     width: 30px;
     text-decoration: none;
+  }
+
+  p {
+    margin-right: 0.5rem;
   }
 `;

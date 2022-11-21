@@ -19,7 +19,15 @@ export const BackgroundGradient = styled.div`
 `;
 
 export const Background = styled.div`
-  background: ${({ theme }) => theme.colors.light_brown};
+  //background: ${({ theme }) => theme.colors.light_brown};
+
+  background: linear-gradient(
+    120deg,
+    rgba(156, 137, 184, 1),
+    rgba(240, 230, 239, 0.8) 50%,
+    rgba(156, 137, 184, 0.6) 90%
+  );
+
   position: fixed;
   width: 100%;
   height: 100%;

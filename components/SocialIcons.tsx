@@ -4,21 +4,22 @@ import { StyledSocialIcons } from "../styles/Footer.styled";
 export default function SocialIcons() {
   return (
     <StyledSocialIcons>
+      <p>Find us on:</p>
       <li>
         <a href="https://twitter.com">
-          <FaTwitter />
+          <FaTwitter size="2x" />
         </a>
       </li>
 
       <li>
         <a href="https://facebook.com">
-          <FaFacebook />
+          <FaFacebook size="2x" />
         </a>
       </li>
 
       <li>
         <a href="https://linkedin.com">
-          <FaLinkedin />
+          <FaLinkedin size="2x" />
         </a>
       </li>
     </StyledSocialIcons>

@@ -4,6 +4,8 @@ import {
   AccordionTitle,
   AccordionContent,
 } from "../styles/Accordion.styled";
+import { IoIosArrowDown } from "react-icons/io";
+import { RotateIcon } from "../styles/Accordion.styled";
 
 interface AccordionProps {
   title: string;
@@ -17,9 +19,11 @@ const Accordion = ({ title, content }: AccordionProps) => {
     <AccordionCard>
       <AccordionTitle active={isActive} onClick={() => setIsActive(!isActive)}>
         <div>{title}</div>
-        <div>{isActive ? "-" : "+"}</div>
+        <RotateIcon active={isActive}>
+          <IoIosArrowDown />
+        </RotateIcon>
       </AccordionTitle>
-      {isActive && <AccordionContent>{content}</AccordionContent>}
+      <AccordionContent active={isActive}>{content}</AccordionContent>
     </AccordionCard>
   );
 };

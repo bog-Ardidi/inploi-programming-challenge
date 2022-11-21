@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import { BackgroundGradient } from "../styles/Background.styled";
 import {
-  HomeContainer,
+  Container,
   HomeTitle,
   HomeSearchBox,
 } from "../styles/HomeComponents.styled";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <BackgroundGradient>
       <Layout>
-        <HomeContainer>
+        <Container>
           <HomeTitle>
             Find a job you love 🐸 <br /> with Jobberinio.
           </HomeTitle>
@@ -20,7 +20,7 @@ export default function Home() {
             required
             placeholder="Find your next job.."
           />
-        </HomeContainer>
+        </Container>
       </Layout>
     </BackgroundGradient>
   );

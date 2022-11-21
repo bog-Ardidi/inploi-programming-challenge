@@ -1,4 +1,9 @@
-import { StyledHeader, Nav, Logo } from "../styles/Header.styled";
+import {
+  StyledHeader,
+  Nav,
+  Logo,
+  AccountContainer,
+} from "../styles/Header.styled";
 import { Button } from "../styles/Button.styled";
 import Link from "next/link";
 
@@ -9,11 +14,12 @@ export default function Header() {
         <Link href="/">
           <Logo src="logo.png" alt="" />
         </Link>
-        <div>
+        <AccountContainer>
           <Link href={`/jobs`}>
             <Button primary={false}>Login</Button>
           </Link>
-        </div>
+          <Button primary>Register</Button>
+        </AccountContainer>
       </Nav>
     </StyledHeader>
   );

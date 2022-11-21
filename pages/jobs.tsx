@@ -1,21 +1,27 @@
 import { accordionData } from "../content";
 import Accordion from "../components/Accordion";
-import { HomeContainer } from "../styles/HomeComponents.styled";
+import { Container, HomeTitle } from "../styles/HomeComponents.styled";
 import Layout from "../components/Layout";
 import { Background } from "../styles/Background.styled";
+import { JobsTitle } from "../styles/JobsComponents.styled";
 
-export default function Jobs() {
+interface JobsProps {
+  query: string;
+}
+
+export default function Jobs({ query = "software engineer" }: JobsProps) {
   return (
     <Background>
       <Layout>
-        <HomeContainer>
-          <h1>React Accordion</h1>
-          <div className="accordion">
-            {accordionData.map(({ title, content }, index) => (
-              <Accordion key={index} title={title} content={content} />
-            ))}
-          </div>
-        </HomeContainer>
+        <Container>
+          <JobsTitle>
+            Job openings for 💼
+            <div>"{query}"</div>
+          </JobsTitle>
+          {accordionData.map(({ title, content }, index) => (
+            <Accordion key={index} title={title} content={content} />
+          ))}
+        </Container>
       </Layout>
     </Background>
   );

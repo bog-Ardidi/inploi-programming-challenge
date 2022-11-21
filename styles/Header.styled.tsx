@@ -15,3 +15,9 @@ export const Nav = styled.nav`
 export const Logo = styled.img`
   max-width: 5rem;
 `;
+
+export const AccountContainer = styled.div`
+  button {
+    margin-left: 1rem;
+  }
+`;
