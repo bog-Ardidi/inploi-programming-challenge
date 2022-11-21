@@ -1,11 +1,12 @@
-import styled from "styled-components";
 import Layout from "../components/Layout";
+import { SearchIcon } from "../components/SearchIcon";
 import { BackgroundGradient } from "../styles/Background.styled";
 import {
   Container,
   HomeTitle,
   HomeSearchBox,
 } from "../styles/HomeComponents.styled";
+import { FaSearch, FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -20,6 +21,10 @@ export default function Home() {
             required
             placeholder="Find your next job.."
           />
+          {/* <SearchIcon
+            icon_one={<FaSearch size="42px" />}
+            icon_two={<FaLongArrowAltRight size="42px" />}
+          /> */}
         </Container>
       </Layout>
     </BackgroundGradient>
