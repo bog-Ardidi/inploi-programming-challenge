@@ -4,11 +4,11 @@ import theme from "./theme";
 export const BackgroundGradient = styled.div`
   background: radial-gradient(
     farthest-corner at 40px 200px,
-    #f0e6ef,
-    #b8bedd,
-    #efc3e6,
-    #f0a6ca,
-    #9c89b8
+    ${theme.colors.lavender_blush},
+    ${theme.colors.light_periwinkle},
+    ${theme.colors.pink_lavender},
+    ${theme.colors.kobi},
+    ${theme.colors.glossy_grape}
   );
   position: fixed;
   width: 100%;
@@ -19,7 +19,7 @@ export const BackgroundGradient = styled.div`
 `;
 
 export const Background = styled.div`
-  background: #f0f2ea;
+  background: ${({ theme }) => theme.colors.light_brown};
   position: fixed;
   width: 100%;
   height: 100%;

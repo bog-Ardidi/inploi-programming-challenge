@@ -11,18 +11,10 @@ export default function Jobs() {
         <HomeContainer>
           <h1>React Accordion</h1>
           <div className="accordion">
-            {accordionData.map(({ title, content }) => (
-              <Accordion title={title} content={content} />
+            {accordionData.map(({ title, content }, index) => (
+              <Accordion key={index} title={title} content={content} />
             ))}
           </div>
-
-          <details>
-            <summary>Open Me</summary>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, provident.
-            </p>
-          </details>
         </HomeContainer>
       </Layout>
     </Background>

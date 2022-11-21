@@ -5,6 +5,7 @@ export const StyledFooter = styled.div`
   bottom: 0;
   width: 100%;
 
+  background: rgba(51, 51, 51, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +26,7 @@ export const StyledSocialIcons = styled.div`
   }
 
   a {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.black};
     display: inline-flex;
     align-items: center;
     justify-content: center;
