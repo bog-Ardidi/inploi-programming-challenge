@@ -1,14 +1,24 @@
+import { KeyboardEvent } from "react";
 import Layout from "../components/Layout";
-import { SearchIcon } from "../components/SearchIcon";
 import { BackgroundGradient } from "../styles/Background.styled";
 import {
   Container,
   HomeTitle,
   HomeSearchBox,
 } from "../styles/HomeComponents.styled";
+import { useRouter } from "next/router";
 import { FaSearch, FaLongArrowAltRight } from "react-icons/fa";
+import { SearchIcon } from "../components/SearchIcon";
 
 export default function Home() {
+  const router = useRouter();
+
+  const onSearch = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      router.push(`/jobs?query=${e.currentTarget.value}`);
+    }
+  };
+
   return (
     <BackgroundGradient>
       <Layout>
@@ -20,11 +30,12 @@ export default function Home() {
             type="text"
             required
             placeholder="Find your next job.."
+            onKeyDown={onSearch}
           />
-          {/* <SearchIcon
-            icon_one={<FaSearch size="42px" />}
-            icon_two={<FaLongArrowAltRight size="42px" />}
-          /> */}
+          {/*<SearchIcon*/}
+          {/*  icon_one={<FaSearch size="42px" />}*/}
+          {/*  icon_two={<FaLongArrowAltRight size="42px" />}*/}
+          {/*/>*/}
         </Container>
       </Layout>
     </BackgroundGradient>

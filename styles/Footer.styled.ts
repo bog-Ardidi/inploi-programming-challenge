@@ -13,6 +13,7 @@ export const StyledFooter = styled.div`
   p {
     font-size: small;
     margin-left: 1rem;
+    user-select: none;
   }
 `;
 
@@ -39,5 +40,6 @@ export const StyledSocialIcons = styled.div`
 
   p {
     margin-right: 0.5rem;
+    user-select: none;
   }
 `;

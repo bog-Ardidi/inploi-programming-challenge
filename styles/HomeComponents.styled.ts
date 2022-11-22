@@ -6,6 +6,10 @@ export const Container = styled.div`
   width: 60%;
   height: calc(100% - 117px);
   overflow: scroll;
+
+  li {
+    list-style: none;
+  }
 `;
 
 export const HomeTitle = styled.h1`
