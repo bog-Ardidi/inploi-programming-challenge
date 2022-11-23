@@ -5,6 +5,8 @@ import {
 import { Button } from "../styles/Button.styled";
 import { Hit } from "../types/jobs";
 import { useRouter } from "next/router";
+import sanitizeHtml from "sanitize-html";
+import { SanitizeHTML } from "../utils/sanitize";
 
 interface AccordionContentProps {
   isActive: Boolean;
@@ -23,7 +25,9 @@ export default function AccordionContent({
 
   return (
     <StyledAccordionContent active={isActive}>
-      <p>{hit.description}</p>
+      <p>
+        <SanitizeHTML html={hit.description} />
+      </p>
 
       <AccordionContentFooter>
         <p>
