@@ -1,4 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import JobCard from "../../components/jobPage/JobCard";
 import Layout from "../../components/overlay/Layout";
 import { BackgroundGradient } from "../../styles/Background.styled";
 import { Container } from "../../styles/HomeComponents.styled";
@@ -45,7 +46,7 @@ export default function Job({
     <BackgroundGradient>
       <Layout>
         <Container>
-          <h1></h1>
+          <JobCard data={data} />
         </Container>
       </Layout>
     </BackgroundGradient>

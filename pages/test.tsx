@@ -7,9 +7,7 @@ export default function Test() {
   return (
     <BackgroundGradient>
       <Layout>
-        <Container>
-          <JobCard />
-        </Container>
+        <Container>{/* <JobCard /> */}</Container>
       </Layout>
     </BackgroundGradient>
   );

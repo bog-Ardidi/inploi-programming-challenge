@@ -2,7 +2,10 @@ import Accordion from "../../components/accordion/AccordionItem";
 import { Container } from "../../styles/HomeComponents.styled";
 import Layout from "../../components/overlay/Layout";
 import { BackgroundGradient } from "../../styles/Background.styled";
-import { JobsTitle, SearchContainer } from "../../styles/JobComponents.styled";
+import {
+  JobsTitle,
+  SearchContainer,
+} from "../../styles/JobPageComponents.styled";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
@@ -11,20 +14,18 @@ import {
 } from "react-instantsearch-dom";
 import SearchBox from "../../components/search/SearchBox";
 import { useRouter } from "next/router";
-import { SearchState } from "react-instantsearch-core";
-
-interface JobsProps {
-  query: string;
-}
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
   process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
 );
 
+const index_name = process.env.NEXT_PUBLIC_ALGOLIA_INDEX;
+
 const Results = connectStateResults(
   ({ searchState, searchResults, children }: any) => {
-    if (!searchState || !searchState.query) return <div>no query</div>;
+    if (!searchState || !searchState.query)
+      return <div>Please input a search</div>;
 
     if (!searchResults || searchResults.nbHits === 0)
       return <div>No results have been found for {searchState.query}.</div>;
@@ -33,9 +34,7 @@ const Results = connectStateResults(
   }
 );
 
-const index_name = process.env.NEXT_PUBLIC_ALGOLIA_INDEX;
-
-export default function Jobs({ query = "software engineer" }: JobsProps) {
+export default function Jobs() {
   const router = useRouter();
 
   if (!router.isReady) return <div>loading</div>;

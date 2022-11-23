@@ -1,29 +1,53 @@
-import { JobCardContainer, JobCardInfo } from "../../styles/JobCard.styled";
+import {
+  HrDot,
+  JobCardContainer,
+  JobCardInfo,
+} from "../../styles/JobCard.styled";
+import { JobDataType } from "../../types/jobs";
+import { exists } from "../../utils/exists";
+import AccordionList from "../accordion/AccordionList";
 
-export default function JobCard() {
+interface JobCardProps {
+  data: JobDataType;
+}
+
+export default function JobCard({ data: { hits } }: JobCardProps) {
+  const hit = hits[0];
+
   return (
     <JobCardContainer>
-      <h2>Software engineer</h2>
+      <h2>{hit.title}</h2>
 
       <JobCardInfo>
-        <img
-          src="https://via.placeholder.com/640x480.png/009988?text=corrupti"
-          alt=""
+        <img src={hit.company_logo ?? "logo.png"} alt="" />
+        <AccordionList
+          li={true}
+          items={[
+            { key: "Company", value: exists(hit.company_name) },
+            { key: "Industry", value: "Financial services" },
+            { key: "Status", value: "Live" },
+            {
+              key: "Job posted",
+              value: new Date().toLocaleTimeString("en-GB"),
+            },
+          ]}
         />
-        <div>
-          <li>
-            Company name: <p>White Label Resources</p>
-          </li>
-          <li>
-            <strong> Industry: </strong>
-            Financial services
-          </li>
-          <li>
-            <strong> Status: </strong>
-            Available
-          </li>
-        </div>
       </JobCardInfo>
+
+      <HrDot />
+
+      <AccordionList
+        li={true}
+        items={[
+          { key: "Company", value: "White label resources" },
+          { key: "Industry", value: "Financial services" },
+          { key: "Status", value: "Live" },
+          {
+            key: "Job posted",
+            value: new Date().toLocaleTimeString("en-GB"),
+          },
+        ]}
+      />
     </JobCardContainer>
   );
 }

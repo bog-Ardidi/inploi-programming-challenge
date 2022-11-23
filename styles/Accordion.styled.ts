@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import theme from "./theme";
 import { hex2rgba } from "../utils/hex2rgba";
 
@@ -75,13 +75,24 @@ export const RotateIcon = styled.div<AccordionProps>`
   transform: ${({ active }) => (active ? `rotate(180deg)` : "")};
 `;
 
-export const ListEntry = styled.div`
-  margin: 1rem;
+interface ListProps {
+  li?: Boolean;
+}
+
+const bulletPoint = css`
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  border-color: ${theme.colors.light_gray};
+  padding-left: 0.5rem;
+`;
+
+export const ListEntry = styled.div<ListProps>`
   opacity: 0.8;
 
   div {
     display: inline-block;
     margin: 0.5rem 0;
     color: ${({ theme }) => theme.colors.dark_purple};
+    ${({ li = false }) => li && bulletPoint}
   }
 `;
