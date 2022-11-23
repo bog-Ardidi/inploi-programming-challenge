@@ -63,7 +63,6 @@ export const AccordionContentFooter = styled.div`
 
   p {
     opacity: 1;
-
     font-size: medium;
   }
 `;
@@ -74,4 +73,15 @@ export const RotateIcon = styled.div<AccordionProps>`
   overflow: hidden;
   transition: all 0.6s ease-out;
   transform: ${({ active }) => (active ? `rotate(180deg)` : "")};
+`;
+
+export const ListEntry = styled.div`
+  margin: 1rem;
+  opacity: 0.8;
+
+  div {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: ${({ theme }) => theme.colors.dark_purple};
+  }
 `;

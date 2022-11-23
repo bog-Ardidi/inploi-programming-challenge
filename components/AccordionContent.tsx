@@ -5,8 +5,8 @@ import {
 import { Button } from "../styles/Button.styled";
 import { Hit } from "../types/jobs";
 import { useRouter } from "next/router";
-import sanitizeHtml from "sanitize-html";
-import { SanitizeHTML } from "../utils/sanitize";
+import { exists } from "../utils/exists";
+import AccordionList from "./AccordionList";
 
 interface AccordionContentProps {
   isActive: Boolean;
@@ -25,14 +25,27 @@ export default function AccordionContent({
 
   return (
     <StyledAccordionContent active={isActive}>
-      <p>
-        <SanitizeHTML html={hit.description} />
-      </p>
+      <AccordionList
+        items={[
+          { key: "👲 Position", value: exists(hit.title) },
+          { key: "🏢 Company", value: exists(hit.company_name) },
+          { key: "🏭 Industry", value: exists(hit.industry) },
+          {
+            key: "📆 Job posted",
+            value: exists(
+              new Date(hit.published_at).toLocaleDateString("en-GB")
+            ),
+          },
+          { key: "💷 Payment", value: exists(hit.pay) },
+        ]}
+      />
 
       <AccordionContentFooter>
         <p>
-          <strong>Location: </strong>
-          {hit.city}, {hit.country}
+          <>
+            Location: &ensp;
+            {exists(hit.city)}, {exists(hit.country)}
+          </>
         </p>
         <Button scale={0.8} primary onClick={relocate}>
           More info

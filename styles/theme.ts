@@ -12,6 +12,7 @@ const theme = {
     light_gray: "#adb5bd",
     dark_gray: "#1F1F1F",
     purple: "#815AC0",
+    dark_purple: "#24002D",
     light_brown: "#9c89b810",
     brown: "#B8AB9A",
   },
