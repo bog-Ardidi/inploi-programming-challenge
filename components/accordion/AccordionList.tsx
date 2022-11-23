@@ -1,4 +1,4 @@
-import { ListEntry } from "../styles/Accordion.styled";
+import { ListEntry } from "../../styles/Accordion.styled";
 
 interface AccordionListProps {
   items: {

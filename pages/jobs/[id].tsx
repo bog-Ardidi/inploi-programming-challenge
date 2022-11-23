@@ -1,6 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Header from "../../components/Header";
-import Layout from "../../components/Layout";
+import Layout from "../../components/overlay/Layout";
 import { BackgroundGradient } from "../../styles/Background.styled";
 import { Container } from "../../styles/HomeComponents.styled";
 import { JobDataType } from "../../types/jobs";

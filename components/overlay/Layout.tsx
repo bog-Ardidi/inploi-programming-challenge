@@ -1,4 +1,4 @@
-import GlobalStyle from "../styles/GlobalStyle";
+import GlobalStyle from "../../styles/GlobalStyle";
 import Header from "./Header";
 import Footer from "./Footer";
 

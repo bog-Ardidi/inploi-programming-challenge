@@ -1,4 +1,4 @@
-import { Flip, FlipInner, FlipFront, FlipBack } from "../styles/SearchIcon";
+import { Flip, FlipInner, FlipFront, FlipBack } from "../../styles/SearchIcon";
 
 interface SearchIconProps {
   icon_one: JSX.Element;

@@ -1,5 +1,5 @@
-import JobCard from "../components/JobCard";
-import Layout from "../components/Layout";
+import JobCard from "../components/jobPage/JobCard";
+import Layout from "../components/overlay/Layout";
 import { BackgroundGradient } from "../styles/Background.styled";
 import { Container } from "../styles/HomeComponents.styled";
 

@@ -1,4 +1,4 @@
-import { JobCardContainer, JobCardInfo } from "../styles/JobCard.styled";
+import { JobCardContainer, JobCardInfo } from "../../styles/JobCard.styled";
 
 export default function JobCard() {
   return (

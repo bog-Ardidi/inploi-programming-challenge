@@ -1,15 +1,15 @@
-import Accordion from "../../components/AccordionItem";
+import Accordion from "../../components/accordion/AccordionItem";
 import { Container } from "../../styles/HomeComponents.styled";
-import Layout from "../../components/Layout";
+import Layout from "../../components/overlay/Layout";
 import { BackgroundGradient } from "../../styles/Background.styled";
-import { JobsTitle, SearchContainer } from "../../styles/JobsComponents.styled";
+import { JobsTitle, SearchContainer } from "../../styles/JobComponents.styled";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
   connectStateResults,
   Hits,
 } from "react-instantsearch-dom";
-import SearchBox from "../../components/SearchBox";
+import SearchBox from "../../components/search/SearchBox";
 import { useRouter } from "next/router";
 import { SearchState } from "react-instantsearch-core";
 

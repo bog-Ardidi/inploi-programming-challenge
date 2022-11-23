@@ -1,5 +1,5 @@
 import { KeyboardEvent } from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/overlay/Layout";
 import {
   BackgroundGradient,
   BackgroundGradientHome,
@@ -11,7 +11,7 @@ import {
 } from "../styles/HomeComponents.styled";
 import { useRouter } from "next/router";
 import { FaSearch, FaLongArrowAltRight } from "react-icons/fa";
-import { SearchIcon } from "../components/SearchIcon";
+import { SearchIcon } from "../components/search/SearchIcon";
 
 export default function Home() {
   const router = useRouter();

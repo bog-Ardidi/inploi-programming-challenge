@@ -3,8 +3,8 @@ import {
   Nav,
   Logo,
   AccountContainer,
-} from "../styles/Header.styled";
-import { Button } from "../styles/Button.styled";
+} from "../../styles/Header.styled";
+import { Button } from "../../styles/Button.styled";
 import Link from "next/link";
 
 export default function Header() {

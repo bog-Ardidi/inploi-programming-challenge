@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { AccordionCard, AccordionTitle } from "../styles/Accordion.styled";
+import { AccordionCard, AccordionTitle } from "../../styles/Accordion.styled";
 import AccordionContent from "./AccordionContent";
 import { IoIosArrowDown } from "react-icons/io";
-import { RotateIcon } from "../styles/Accordion.styled";
+import { RotateIcon } from "../../styles/Accordion.styled";
 
 const Accordion = ({ hit }: any) => {
   const [isActive, setIsActive] = useState<Boolean>(false);
