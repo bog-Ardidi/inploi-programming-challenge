@@ -1,6 +1,9 @@
 import { KeyboardEvent } from "react";
 import Layout from "../components/Layout";
-import { BackgroundGradient } from "../styles/Background.styled";
+import {
+  BackgroundGradient,
+  BackgroundGradientHome,
+} from "../styles/Background.styled";
 import {
   Container,
   HomeTitle,
@@ -20,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <BackgroundGradient>
+    <BackgroundGradientHome>
       <Layout>
         <Container>
           <HomeTitle>
@@ -38,6 +41,6 @@ export default function Home() {
           {/*/>*/}
         </Container>
       </Layout>
-    </BackgroundGradient>
+    </BackgroundGradientHome>
   );
 }

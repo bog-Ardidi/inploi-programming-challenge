@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "./theme";
+import { hex2rgba } from "../utils/hex2rgba";
 
 interface AccordionProps {
   active: Boolean;
@@ -18,19 +19,19 @@ export const AccordionTitle = styled.div<AccordionProps>`
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 
-  // border when closed
-  border: ${(props: any) => (props.active ? "1px solid" : "none")};
+  // border closed
+  border: ${({ active }) => (active ? "1px solid" : "none")};
   border-radius: 10px;
   border-color: ${({ theme }) => theme.colors.white};
 
   //border open
-  border-bottom-left-radius: ${(props: any) => props.active && 0};
-  border-bottom-right-radius: ${(props: any) => props.active && 0};
-  border-bottom-color: ${(props: any) => props.active && theme.colors.brown};
+  border-bottom-left-radius: ${({ active }) => active && 0};
+  border-bottom-right-radius: ${({ active }) => active && 0};
+  border-bottom-color: ${({ active }) => active && theme.colors.brown};
   transition: border 0.3s;
 
   &:hover {
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: ${({ theme }) => hex2rgba(theme.colors.gray, 0.5)};
   }
 
   div {
@@ -38,19 +39,33 @@ export const AccordionTitle = styled.div<AccordionProps>`
   }
 `;
 
-export const AccordionContent = styled.div<AccordionProps>`
+export const StyledAccordionContent = styled.div<AccordionProps>`
   background-color: ${({ theme }) => theme.colors.white};
   padding: 1rem;
   text-align: left;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 
   // open animation
-  opacity: ${(props) => (props.active ? "1" : "0")};
-  max-height: ${(props) => (props.active ? "100%" : "0")};
+  opacity: ${({ active }) => (active ? "1" : "0")};
+  max-height: ${({ active }) => (active ? "100%" : "0")};
   overflow: hidden;
-  padding: ${(props) => (props.active ? "15px" : "0 15px")};
+  padding: ${({ active }) => (active ? "15px" : "0 15px")};
   transition: all 0.3s;
+`;
+
+export const AccordionContentFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  p {
+    opacity: 1;
+
+    font-size: medium;
+  }
 `;
 
 export const RotateIcon = styled.div<AccordionProps>`
@@ -58,5 +73,5 @@ export const RotateIcon = styled.div<AccordionProps>`
   transform: rotate(0deg);
   overflow: hidden;
   transition: all 0.6s ease-out;
-  transform: ${(props) => (props.active ? `rotate(180deg)` : "")};
+  transform: ${({ active }) => (active ? `rotate(180deg)` : "")};
 `;

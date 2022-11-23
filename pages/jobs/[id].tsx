@@ -1,4 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import Header from "../../components/Header";
+import Layout from "../../components/Layout";
+import { BackgroundGradient } from "../../styles/Background.styled";
+import { Container } from "../../styles/HomeComponents.styled";
 import { JobDataType } from "../../types/jobs";
 
 export const getServerSideProps: GetServerSideProps<{
@@ -7,7 +11,7 @@ export const getServerSideProps: GetServerSideProps<{
   const {
     NEXT_PUBLIC_ALGOLIA_API_KEY,
     NEXT_PUBLIC_ALGOLIA_APP_ID,
-    NEXT_PUBLIC_ALGOLIA_INDEX
+    NEXT_PUBLIC_ALGOLIA_INDEX,
   } = process.env;
 
   const headers = {
@@ -38,5 +42,13 @@ export const getServerSideProps: GetServerSideProps<{
 export default function Job({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return <div>{JSON.stringify(data)}</div>;
+  return (
+    <BackgroundGradient>
+      <Layout>
+        <Container>
+          <h1></h1>
+        </Container>
+      </Layout>
+    </BackgroundGradient>
+  );
 }

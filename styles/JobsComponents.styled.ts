@@ -3,22 +3,14 @@ import styled from "styled-components";
 export const JobsTitle = styled.h1`
   padding: 1rem;
   user-select: none;
-
-  div {
-    font-size: large;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    user-select: text;
-  }
 `;
 
 export const JobsSearchBox = styled.input`
   width: 50%;
   padding: 0.5rem;
   border-style: solid;
-  border-color: #adb5bd;
+  border-color: ${({ theme }) => theme.colors.light_gray};
   font-size: large;
-  margin-bottom: 2rem;
 `;
 
 export const SearchContainer = styled.div`
@@ -29,6 +21,7 @@ export const SearchContainer = styled.div`
   border-color: ${({ theme }) => theme.colors.gray};
 
   p {
-    margin: 0;
+    margin-top: 0rem;
+    font-size: small;
   }
 `;

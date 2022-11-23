@@ -24,6 +24,6 @@ export const HomeSearchBox = styled.input`
   padding: 2rem;
   border-radius: 10px;
   border-style: solid;
-  border-color: #adb5bd;
+  border-color: ${({ theme }) => theme.colors.light_gray};
   font-size: large;
 `;

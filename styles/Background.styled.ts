@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import theme from "./theme";
+import { hex2rgba } from "../utils/hex2rgba";
 
-export const BackgroundGradient = styled.div`
+export const BackgroundGradientHome = styled.div`
   background: radial-gradient(
     farthest-corner at 40px 200px,
     ${theme.colors.lavender_blush},
@@ -18,14 +19,12 @@ export const BackgroundGradient = styled.div`
   z-index: 1000;
 `;
 
-export const Background = styled.div`
-  //background: ${({ theme }) => theme.colors.light_brown};
-
+export const BackgroundGradient = styled.div`
   background: linear-gradient(
     120deg,
-    rgba(156, 137, 184, 1),
-    rgba(240, 230, 239, 0.8) 50%,
-    rgba(156, 137, 184, 0.6) 90%
+    ${hex2rgba(theme.colors.glossy_grape)},
+    ${hex2rgba(theme.colors.lavender_blush, 0.8)} 50%,
+    ${hex2rgba(theme.colors.glossy_grape, 0.6)} 90%
   );
 
   position: fixed;

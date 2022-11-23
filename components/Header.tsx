@@ -15,9 +15,7 @@ export default function Header() {
           <Logo src="logo.png" alt="" />
         </Link>
         <AccountContainer>
-          <Link href={`/jobs`}>
-            <Button primary={false}>Login</Button>
-          </Link>
+          <Button primary={false}>Login</Button>
           <Button primary>Register</Button>
         </AccountContainer>
       </Nav>

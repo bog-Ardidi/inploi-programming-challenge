@@ -3,6 +3,7 @@ import theme from "./theme";
 
 interface Props {
   primary: boolean;
+  scale?: number;
 }
 
 export const Button = styled.button<Props>`
@@ -26,6 +27,9 @@ export const Button = styled.button<Props>`
 
   border-color: ${({ primary = false }) =>
     primary ? theme.colors.brown : theme.colors.purple};
+
+  
+  transform: scale(${({ scale }) => scale && scale});
 
   &:hover {
     opacity: 0.9;

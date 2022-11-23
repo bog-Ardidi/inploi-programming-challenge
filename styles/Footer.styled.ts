@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { hex2rgba } from "../utils/hex2rgba";
 
 export const StyledFooter = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
 
-  background: rgba(51, 51, 51, 0.1);
+  background: ${({ theme }) => hex2rgba(theme.colors.gray, 0.1)};
   display: flex;
   align-items: center;
   justify-content: space-between;

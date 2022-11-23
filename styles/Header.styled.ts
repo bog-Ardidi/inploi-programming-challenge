@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { hex2rgba } from "../utils/hex2rgba";
 
 export const StyledHeader = styled.header`
-  background: rgba(51, 51, 51, 0.6);
+  background: ${({ theme }) => hex2rgba(theme.colors.gray, 0.6)};
   padding: 1rem 2rem;
   height: 117px;
 `;
