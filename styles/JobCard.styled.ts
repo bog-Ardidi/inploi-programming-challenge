@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const JobCardContainer = styled.div`
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
   padding-left: 3rem;
   background-color: ${({ theme }) => theme.colors.white};
@@ -47,5 +47,5 @@ export const JobCardFooter = styled.div`
   margin: 0 auto;
   margin-top: 2rem;
   text-align: center;
-  color: ${({ theme }) => theme.colors.dark_red};
+  color: ${({ theme }) => theme.colors.dark};
 `;

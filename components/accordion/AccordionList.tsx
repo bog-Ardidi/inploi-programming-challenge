@@ -1,5 +1,4 @@
 import { ListEntry } from "../../styles/Accordion.styled";
-import { SanitizeHTML } from "../../utils/sanitize";
 
 interface AccordionListProps {
   items: {
@@ -13,13 +12,11 @@ export default function AccordionList({ items, li }: AccordionListProps) {
   return (
     <div>
       {items.map((item, index) => (
-        <li key={index}>
-          <ListEntry li={li}>
-            <>
-              <div>{item.key}</div>: {item.value}
-            </>
-          </ListEntry>
-        </li>
+        <ListEntry key={index} li={li}>
+          <>
+            <div>{item.key}</div>: {item.value}
+          </>
+        </ListEntry>
       ))}
     </div>
   );

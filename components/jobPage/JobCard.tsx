@@ -17,8 +17,6 @@ interface JobCardProps {
 export default function JobCard({ data: { hits } }: JobCardProps) {
   const hit = hits[0];
 
-  console.log(hit.apply_url);
-
   return (
     <JobCardContainer>
       <h2>{hit.title}</h2>

@@ -16,6 +16,7 @@ const theme = {
     light_brown: "#9c89b810",
     brown: "#B8AB9A",
     dark_red: "#a70000",
+    cyan: "#0077b6",
   },
   mobile: "768px",
 };

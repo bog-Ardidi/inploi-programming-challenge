@@ -1,21 +1,22 @@
-import { KeyboardEvent } from "react";
+import { FormEventHandler, KeyboardEvent, useState } from "react";
 import Layout from "../components/overlay/Layout";
+import { BackgroundGradientHome } from "../styles/Background.styled";
 import {
-  BackgroundGradient,
-  BackgroundGradientHome,
-} from "../styles/Background.styled";
-import { Container, HomeTitle, HomeSearchBox } from "../styles/Home.styled";
+  Container,
+  HomeTitle,
+  HomeSearchBox,
+  SearchButton,
+} from "../styles/Home.styled";
 import { useRouter } from "next/router";
-import { FaSearch, FaLongArrowAltRight } from "react-icons/fa";
-import { SearchIcon } from "../components/search/SearchIcon";
+import { FaSearch } from "react-icons/fa";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
   const router = useRouter();
 
-  const onSearch = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      router.push(`/jobs?query=${e.currentTarget.value}`);
-    }
+  const onSearch = (e: any) => {
+    e.preventDefault();
+    router.push(`/jobs?query=${search}`);
   };
 
   return (
@@ -25,16 +26,18 @@ export default function Home() {
           <HomeTitle>
             Find a job you love 🐸 <br /> with Jobberinio.
           </HomeTitle>
-          <HomeSearchBox
-            type="text"
-            required
-            placeholder="Find your next job.."
-            onKeyDown={onSearch}
-          />
-          {/*<SearchIcon*/}
-          {/*  icon_one={<FaSearch size="42px" />}*/}
-          {/*  icon_two={<FaLongArrowAltRight size="42px" />}*/}
-          {/*/>*/}
+          <form onSubmit={onSearch}>
+            <HomeSearchBox
+              type="text"
+              required
+              value={search}
+              placeholder="Find your next job.."
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <SearchButton type="submit">
+              <FaSearch size={20} />
+            </SearchButton>
+          </form>
         </Container>
       </Layout>
     </BackgroundGradientHome>

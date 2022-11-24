@@ -19,7 +19,10 @@ export const BackgroundGradientHome = styled.div`
   z-index: 1000;
 `;
 
-export const BackgroundGradient = styled.div`
+export const BackgroundGradient = styled.main`
+  display: grid;
+  grid-template-rows: min-content auto 45px;
+
   background: linear-gradient(
     120deg,
     ${hex2rgba(theme.colors.glossy_grape)},
