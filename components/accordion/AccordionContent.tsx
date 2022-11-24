@@ -13,6 +13,8 @@ interface AccordionContentProps {
   hit: Hit;
 }
 
+// this component represents the card that is shown when
+// an accordion open
 export default function AccordionContent({
   isActive,
   hit,

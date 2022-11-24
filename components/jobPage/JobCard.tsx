@@ -21,7 +21,7 @@ export default function JobCard({ data: { hits } }: JobCardProps) {
     <JobCardContainer>
       <h2>{hit.title}</h2>
       <JobCardInfo>
-        <img src={hit.company_logo ?? "logo.png"} alt="" />
+        <img src={hit.company_logo ?? "/logo.png"} alt="" />
         <AccordionList
           li
           items={[

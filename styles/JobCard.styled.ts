@@ -47,5 +47,5 @@ export const JobCardFooter = styled.div`
   margin: 0 auto;
   margin-top: 2rem;
   text-align: center;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.dark_red};
 `;

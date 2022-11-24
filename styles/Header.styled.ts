@@ -4,7 +4,10 @@ import { hex2rgba } from "../utils/hex2rgba";
 export const StyledHeader = styled.header`
   background: ${({ theme }) => hex2rgba(theme.colors.gray, 0.6)};
   padding: 1rem 2rem;
-  height: 117px;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export const Nav = styled.nav`

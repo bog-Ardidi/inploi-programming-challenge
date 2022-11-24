@@ -12,7 +12,7 @@ export default function Header() {
     <StyledHeader>
       <Nav>
         <Link href="/">
-          <Logo src="logo.png" alt="" />
+          <Logo src="/logo.png" alt="" />
         </Link>
         <AccountContainer>
           <Button primary={false}>Login</Button>

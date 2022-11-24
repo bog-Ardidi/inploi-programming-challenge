@@ -8,6 +8,8 @@ interface AccordionListProps {
   li?: Boolean;
 }
 
+// this component is used to easily list all the fields
+// in the accordion and the card
 export default function AccordionList({ items, li }: AccordionListProps) {
   return (
     <div>

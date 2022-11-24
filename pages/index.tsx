@@ -1,6 +1,6 @@
-import { FormEventHandler, KeyboardEvent, useState } from "react";
+import { useState } from "react";
 import Layout from "../components/overlay/Layout";
-import { BackgroundGradientHome } from "../styles/Background.styled";
+import { BackgroundGradient } from "../styles/Background.styled";
 import {
   Container,
   HomeTitle,
@@ -9,6 +9,7 @@ import {
 } from "../styles/Home.styled";
 import { useRouter } from "next/router";
 import { FaSearch } from "react-icons/fa";
+import { Flex } from "../styles/uits.styled";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -20,26 +21,28 @@ export default function Home() {
   };
 
   return (
-    <BackgroundGradientHome>
+    <BackgroundGradient home>
       <Layout>
         <Container>
           <HomeTitle>
             Find a job you love 🐸 <br /> with Jobberinio.
           </HomeTitle>
           <form onSubmit={onSearch}>
-            <HomeSearchBox
-              type="text"
-              required
-              value={search}
-              placeholder="Find your next job.."
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <SearchButton type="submit">
-              <FaSearch size={20} />
-            </SearchButton>
+            <Flex>
+              <HomeSearchBox
+                type="text"
+                required
+                value={search}
+                placeholder="Find your next job.."
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <SearchButton type="submit">
+                <FaSearch size={20} />
+              </SearchButton>
+            </Flex>
           </form>
         </Container>
       </Layout>
-    </BackgroundGradientHome>
+    </BackgroundGradient>
   );
 }
