@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   margin: 0 auto;
   text-align: center;
-  width: 65%;
+  width: 70%;
   height: calc(100% - 117px);
   overflow: scroll;
 
@@ -20,7 +20,7 @@ export const HomeTitle = styled.h1`
 `;
 
 export const HomeSearchBox = styled.input`
-  width: 100%;
+  width: 90%;
   padding: 2rem;
   border-radius: 10px;
   border-style: solid;

@@ -15,6 +15,7 @@ const theme = {
     dark_purple: "#24002D",
     light_brown: "#9c89b810",
     brown: "#B8AB9A",
+    dark_red: "#a70000",
   },
   mobile: "768px",
 };

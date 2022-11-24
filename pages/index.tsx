@@ -4,11 +4,7 @@ import {
   BackgroundGradient,
   BackgroundGradientHome,
 } from "../styles/Background.styled";
-import {
-  Container,
-  HomeTitle,
-  HomeSearchBox,
-} from "../styles/HomeComponents.styled";
+import { Container, HomeTitle, HomeSearchBox } from "../styles/Home.styled";
 import { useRouter } from "next/router";
 import { FaSearch, FaLongArrowAltRight } from "react-icons/fa";
 import { SearchIcon } from "../components/search/SearchIcon";

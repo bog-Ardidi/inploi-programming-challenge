@@ -90,8 +90,9 @@ export const ListEntry = styled.div<ListProps>`
   opacity: 0.8;
 
   div {
+    user-select: none;
     display: inline-block;
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
     color: ${({ theme }) => theme.colors.dark_purple};
     ${({ li = false }) => li && bulletPoint}
   }

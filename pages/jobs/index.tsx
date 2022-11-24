@@ -1,11 +1,8 @@
 import Accordion from "../../components/accordion/AccordionItem";
-import { Container } from "../../styles/HomeComponents.styled";
+import { Container } from "../../styles/Home.styled";
 import Layout from "../../components/overlay/Layout";
 import { BackgroundGradient } from "../../styles/Background.styled";
-import {
-  JobsTitle,
-  SearchContainer,
-} from "../../styles/JobPageComponents.styled";
+import { JobsTitle, SearchContainer } from "../../styles/JobPage.styled";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,

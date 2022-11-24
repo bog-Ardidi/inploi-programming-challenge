@@ -42,3 +42,10 @@ export const HrDot = styled.hr`
   border-color: ${({ theme }) => theme.colors.light_periwinkle};
   margin-bottom: 1rem;
 `;
+
+export const JobCardFooter = styled.div`
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.dark_red};
+`;

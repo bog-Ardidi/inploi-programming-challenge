@@ -6,7 +6,7 @@ export const JobsTitle = styled.h1`
 `;
 
 export const JobsSearchBox = styled.input`
-  width: 50%;
+  width: 45%;
   padding: 0.5rem;
   border-style: solid;
   border-color: ${({ theme }) => theme.colors.light_gray};

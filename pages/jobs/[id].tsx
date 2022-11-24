@@ -2,7 +2,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import JobCard from "../../components/jobPage/JobCard";
 import Layout from "../../components/overlay/Layout";
 import { BackgroundGradient } from "../../styles/Background.styled";
-import { Container } from "../../styles/HomeComponents.styled";
+import { Container } from "../../styles/Home.styled";
 import { JobDataType } from "../../types/jobs";
 
 export const getServerSideProps: GetServerSideProps<{

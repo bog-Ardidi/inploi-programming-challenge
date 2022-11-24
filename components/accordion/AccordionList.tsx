@@ -1,9 +1,10 @@
 import { ListEntry } from "../../styles/Accordion.styled";
+import { SanitizeHTML } from "../../utils/sanitize";
 
 interface AccordionListProps {
   items: {
     key: string;
-    value: HTMLElement | string;
+    value: string;
   }[];
   li?: Boolean;
 }

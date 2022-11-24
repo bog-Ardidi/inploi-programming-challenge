@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
-import { JobsSearchBox } from "../../styles/JobPageComponents.styled";
+import { JobsSearchBox } from "../../styles/JobPage.styled";
 
 const Search = ({ defaultRefinement, refine }: any) => {
   const [value, setValue] = useState(defaultRefinement);
