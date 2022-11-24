@@ -11,6 +11,7 @@ import {
 } from "react-instantsearch-dom";
 import SearchBox from "../../components/search/SearchBox";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -38,6 +39,12 @@ export default function Jobs() {
 
   return (
     <BackgroundGradient>
+      <Head>
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_APP_URL}/jobs`}
+        />
+      </Head>
       <Layout>
         <Container>
           <JobsTitle>Job openings for 💼</JobsTitle>

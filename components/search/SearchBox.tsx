@@ -13,7 +13,7 @@ const Search = ({ defaultRefinement, refine }: SearchProps) => {
   useEffect(() => {
     setValue(defaultRefinement);
     refine(defaultRefinement);
-  }, [defaultRefinement]);
+  }, [defaultRefinement, refine]);
 
   // prettier-ignore
   const onChange = ({currentTarget: {value}}: ChangeEvent<HTMLInputElement>) => {
