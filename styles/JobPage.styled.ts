@@ -28,6 +28,7 @@ export const SearchContainer = styled.div`
   border-bottom: 1px solid;
   border-color: ${({ theme }) => theme.colors.gray};
   backdrop-filter: blur(10px);
+  z-index: 10000;
 
   p {
     margin-top: 0rem;
