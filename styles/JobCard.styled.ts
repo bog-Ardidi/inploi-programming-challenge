@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const JobCardContainer = styled.div`
   margin: 1rem;
   padding: 2rem;
-  padding-left: 3rem;
   background-color: ${({ theme }) => theme.colors.white};
   border: 1px solid;
   border-color: ${({ theme }) => theme.colors.light_gray};
@@ -33,6 +32,18 @@ export const JobCardInfo = styled.div`
     border-radius: 5px;
     margin-right: 2rem;
     user-select: none;
+
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+
+    img {
+      margin-bottom: 2rem;
+    }
   }
 `;
 

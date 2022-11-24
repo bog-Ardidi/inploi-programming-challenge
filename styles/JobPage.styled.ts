@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const JobsTitle = styled.h1`
   padding: 1rem;
   user-select: none;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 0rem;
+  }
 `;
 
 export const JobsSearchBox = styled.input`
@@ -11,6 +15,10 @@ export const JobsSearchBox = styled.input`
   border-style: solid;
   border-color: ${({ theme }) => theme.colors.light_gray};
   font-size: large;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 80%;
+  }
 `;
 
 export const SearchContainer = styled.div`

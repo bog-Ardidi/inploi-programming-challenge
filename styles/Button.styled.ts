@@ -35,4 +35,8 @@ export const Button = styled.button<Props>`
     opacity: 0.9;
     transform: scale(0.98);
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: max-content;
+  }
 `;

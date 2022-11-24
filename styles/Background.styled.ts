@@ -38,4 +38,8 @@ export const BackgroundGradient = styled.main<BackgroundProps>`
   top: 0px;
   left: 0px;
   z-index: 1000;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    grid-template-rows: min-content auto 83px;
+  }
 `;

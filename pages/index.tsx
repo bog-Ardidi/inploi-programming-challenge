@@ -6,6 +6,7 @@ import {
   HomeTitle,
   HomeSearchBox,
   SearchButton,
+  JobInputForm,
 } from "../styles/Home.styled";
 import { useRouter } from "next/router";
 import { FaSearch } from "react-icons/fa";
@@ -27,7 +28,7 @@ export default function Home() {
           <HomeTitle>
             Find a job you love 🐸 <br /> with Jobberinio.
           </HomeTitle>
-          <form onSubmit={onSearch}>
+          <JobInputForm onSubmit={onSearch}>
             <Flex>
               <HomeSearchBox
                 type="text"
@@ -40,7 +41,7 @@ export default function Home() {
                 <FaSearch size={20} />
               </SearchButton>
             </Flex>
-          </form>
+          </JobInputForm>
         </Container>
       </Layout>
     </BackgroundGradient>

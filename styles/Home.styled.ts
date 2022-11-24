@@ -10,6 +10,14 @@ export const Container = styled.section`
   li {
     list-style: none;
   }
+
+  ul {
+    padding: 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
+  }
 `;
 
 export const HomeTitle = styled.h1`
@@ -17,6 +25,10 @@ export const HomeTitle = styled.h1`
   font-size: calc(18px + 2vw);
   white-space: pre-line;
   user-select: none;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 2rem;
+  }
 `;
 
 const searchBorder = css`
@@ -25,6 +37,12 @@ const searchBorder = css`
   border-color: ${({ theme }) => theme.colors.light_gray};
   padding: 2rem;
   font-size: large;
+  margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 1rem;
+    font-size: medium;
+  }
 `;
 
 export const HomeSearchBox = styled.input`
@@ -50,4 +68,10 @@ export const SearchButton = styled.button`
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 0; 
+`;
+
+export const JobInputForm = styled.form`
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin: 0 1rem;
+  }
 `;
