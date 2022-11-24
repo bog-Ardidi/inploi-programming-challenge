@@ -26,11 +26,13 @@ export default function JobCard({ data: { hits } }: JobCardProps) {
           li
           items={[
             { key: "Company", value: exists(hit.company_name) },
-            { key: "Industry", value: "Financial services" },
-            { key: "Status", value: "Live" },
+            { key: "Industry", value: exists(hit.industry) },
+            { key: "Status", value: exists(hit.status) },
             {
               key: "Job posted",
-              value: new Date().toLocaleTimeString("en-GB"),
+              value: exists(
+                new Date(hit.published_at).toLocaleDateString("en-GB")
+              ),
             },
           ]}
         />
@@ -45,12 +47,6 @@ export default function JobCard({ data: { hits } }: JobCardProps) {
           { key: "Address 2", value: exists(hit.address_2) },
           { key: "Postcode", value: exists(hit.postcode) },
           { key: "Pay", value: exists(hit.pay) },
-          {
-            key: "Job posted",
-            value: exists(
-              new Date(hit.published_at).toLocaleDateString("en-GB")
-            ),
-          },
           { key: "Description", value: "" },
         ]}
       />
