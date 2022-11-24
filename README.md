@@ -1,6 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Programming challenge for Inploi by Georgi Petkov.
 
-## Getting Started
+The app is deployed at [https://inploi-programming-challenge.vercel.app/](https://inploi-programming-challenge.vercel.app/)
+
+<br>
+
+## Run instructions
 
 First, run the development server:
 
@@ -12,23 +16,20 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Page explanation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Index
+   - Entry point for the website which presents the user with a search field
+     to search for jobs.
+   - When they submit their search query, that redirects them to the job results page.
+2. Job results page
+   - Presents user with a list of all jobs that match the description they've entered on
+     the previous page.
+   - Can see basic information and expand the accordion to view more information or go to
+     the job specification page.
+   - User can refine their initial query which also updates the list of jobs in real time.
+3. Job details page
+   - Shows relevant information for the specified job.
+   - The page forwards you to apply to the selected job at the company webpage (if it exists).
