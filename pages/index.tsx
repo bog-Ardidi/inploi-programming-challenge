@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Layout from "../components/overlay/Layout";
 import { BackgroundGradient } from "../styles/Background.styled";
 import {
@@ -15,7 +15,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const router = useRouter();
 
-  const onSearch = (e: any) => {
+  const onSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     router.push(`/jobs?query=${search}`);
   };

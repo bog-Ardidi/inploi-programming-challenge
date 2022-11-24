@@ -16,10 +16,6 @@ export const Nav = styled.nav`
   justify-content: space-between;
 `;
 
-export const Logo = styled.img`
-  max-width: 5rem;
-`;
-
 export const AccountContainer = styled.div`
   button {
     margin-left: 1rem;

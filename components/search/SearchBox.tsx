@@ -2,13 +2,18 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
 import { JobsSearchBox } from "../../styles/JobPage.styled";
 
-const Search = ({ defaultRefinement, refine }: any) => {
+interface SearchProps {
+  defaultRefinement: string;
+  refine: (refinement: string) => void;
+}
+
+const Search = ({ defaultRefinement, refine }: SearchProps) => {
   const [value, setValue] = useState(defaultRefinement);
 
   useEffect(() => {
     setValue(defaultRefinement);
     refine(defaultRefinement);
-  }, []);
+  }, [defaultRefinement]);
 
   // prettier-ignore
   const onChange = ({currentTarget: {value}}: ChangeEvent<HTMLInputElement>) => {

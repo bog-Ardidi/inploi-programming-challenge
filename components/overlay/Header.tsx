@@ -1,18 +1,18 @@
 import {
   StyledHeader,
   Nav,
-  Logo,
   AccountContainer,
 } from "../../styles/Header.styled";
 import { Button } from "../../styles/Button.styled";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <StyledHeader>
       <Nav>
         <Link href="/">
-          <Logo src="/logo.png" alt="" />
+          <Image src="/logo.png" alt="" width={80} height={80} />
         </Link>
         <AccountContainer>
           <Button primary={false}>Login</Button>

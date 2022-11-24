@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { RotateIcon } from "../../styles/Accordion.styled";
 
 // this component represents a single accordion item
-const Accordion = ({ hit }: any) => {
+const Accordion = (hit: any) => {
   const [isActive, setIsActive] = useState<Boolean>(false);
 
   const { id } = hit;
