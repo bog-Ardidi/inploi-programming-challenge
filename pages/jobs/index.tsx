@@ -34,26 +34,25 @@ const Results = connectStateResults(
 export default function Jobs() {
   const router = useRouter();
 
-  if (!router.isReady) return <div>loading</div>;
+  if (!router.isReady && !router.query) return <div>loading</div>;
 
   return (
     <BackgroundGradient>
       <Layout>
-        {router.query && (
-          <Container>
-            <JobsTitle>Job openings for 💼</JobsTitle>
-            <InstantSearch indexName={index_name} searchClient={searchClient}>
-              <SearchContainer>
-                <SearchBox defaultRefinement={router.query.query?.toString()} />
-                <p>Not happy with these jobs? Try another!</p>
-              </SearchContainer>
-
-              <Results>
-                <Hits hitComponent={Accordion} />
-              </Results>
-            </InstantSearch>
-          </Container>
-        )}
+        <Container>
+          <JobsTitle>Job openings for 💼</JobsTitle>
+          <InstantSearch indexName={index_name} searchClient={searchClient}>
+            <SearchContainer>
+              <SearchBox
+                defaultRefinement={router.query?.query?.toString() ?? ""}
+              />
+              <p>Not happy with these jobs? Try another!</p>
+            </SearchContainer>
+            <Results>
+              <Hits hitComponent={Accordion} />
+            </Results>
+          </InstantSearch>
+        </Container>
       </Layout>
     </BackgroundGradient>
   );

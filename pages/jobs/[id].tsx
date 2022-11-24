@@ -32,6 +32,13 @@ export const getServerSideProps: GetServerSideProps<{
 
   const response = await res.json();
 
+  // If no results found for job id redirect to 404
+  if (response.hits.length === 0) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       data: response,

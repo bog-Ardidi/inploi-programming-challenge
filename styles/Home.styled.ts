@@ -14,10 +14,7 @@ export const Container = styled.section`
 
 export const HomeTitle = styled.h1`
   padding: 4rem;
-  font-size: 3vw;
-  //font-size: xxx-large;
-  //font-size: calc(14px + 3vw);
-  //font-size: calc(14px + 2.5vw);
+  font-size: calc(18px + 2vw);
   white-space: pre-line;
   user-select: none;
 `;
